@@ -1,0 +1,36 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="1040" cy="130" r="118" fill="url(#sun)"/>
+  <circle cx="140" cy="620" r="210" fill="#38BDF8" fill-opacity=".22"/>
+  <path d="M0 0h1280v720H0z" fill="url(#grid)" fill-opacity=".17"/>
+  <g filter="url(#shadow)">
+    <rect x="116" y="116" width="492" height="488" rx="36" fill="#0F172A" fill-opacity=".62" stroke="white" stroke-opacity=".18"/>
+    <text x="162" y="186" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="24" font-weight="700">Clima en tiempo real</text>
+    <text x="162" y="275" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="76" font-weight="900">App del</text>
+    <text x="162" y="352" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="76" font-weight="900">Clima</text>
+    <rect x="162" y="404" width="344" height="64" rx="18" fill="#0F172A" fill-opacity=".58" stroke="white" stroke-opacity=".18"/>
+    <text x="188" y="444" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Buscar ciudad...</text>
+    <rect x="162" y="496" width="92" height="38" rx="19" fill="white" fill-opacity=".12"/>
+    <text x="183" y="522" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18" font-weight="700">Cali</text>
+    <rect x="268" y="496" width="132" height="38" rx="19" fill="white" fill-opacity=".12"/>
+    <text x="290" y="522" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18" font-weight="700">Medellín</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="672" y="116" width="492" height="488" rx="36" fill="#0F172A" fill-opacity=".64" stroke="white" stroke-opacity=".18"/>
+    <rect x="718" y="156" width="128" height="128" rx="32" fill="white" fill-opacity=".14"/>
+    <text x="742" y="240" font-family="Arial, sans-serif" font-size="68">🌤️</text>
+    <text x="872" y="200" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="50" font-weight="900">Bogotá</text>
+    <text x="872" y="240" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Parcialmente nublado</text>
+    <text x="718" y="394" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="112" font-weight="900">19°C</text>
+    <g fill="white" fill-opacity=".12" stroke="white" stroke-opacity=".16">
+      <rect x="718" y="438" width="92" height="86" rx="18"/><rect x="826" y="438" width="92" height="86" rx="18"/><rect x="934" y="438" width="92" height="86" rx="18"/><rect x="1042" y="438" width="76" height="86" rx="18"/>
+    </g>
+    <text x="744" y="489" font-family="Arial, sans-serif" font-size="32">💧</text><text x="852" y="489" font-family="Arial, sans-serif" font-size="32">💨</text><text x="960" y="489" font-family="Arial, sans-serif" font-size="32">🥵</text><text x="1060" y="489" font-family="Arial, sans-serif" font-size="32">🧭</text>
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse"><stop stop-color="#0F172A"/><stop offset=".55" stop-color="#0369A1"/><stop offset="1" stop-color="#38BDF8"/></linearGradient>
+    <radialGradient id="sun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1040 130) rotate(90) scale(118)"><stop stop-color="#FEF08A"/><stop offset=".55" stop-color="#FB923C" stop-opacity=".5"/><stop offset="1" stop-color="#FB923C" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0v42" stroke="white" stroke-opacity=".35"/></pattern>
+    <filter id="shadow" x="56" y="66" width="1168" height="598" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="30" stdDeviation="28" flood-color="#020617" flood-opacity=".35"/></filter>
+  </defs>
+</svg>

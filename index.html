@@ -3,21 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App del Clima</title>
+  <meta name="description" content="App del clima moderna con animaciones, código modular y pronóstico de 5 días.">
+  <meta name="theme-color" content="#0ea5e9">
+  <title>App del Clima | Consulta el clima en vivo</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://api.open-meteo.com">
+  <link rel="preconnect" href="https://geocoding-api.open-meteo.com">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="contenedor">
-    <h1>App del Clima</h1>
-
-    <div class="busqueda">
-      <input type="text" id="inputCiudad" placeholder="Escribe una ciudad">
-      <button id="btnBuscar">Buscar</button>
-    </div>
-
-    <div id="resultado"></div>
+<body data-weather="default">
+  <div class="weather-scene" aria-hidden="true">
+    <span class="orb orb-sun"></span>
+    <span class="orb orb-glow"></span>
+    <span class="cloud cloud-one"></span>
+    <span class="cloud cloud-two"></span>
+    <span class="cloud cloud-three"></span>
+    <span class="rain rain-one"></span>
+    <span class="rain rain-two"></span>
+    <span class="sparkle sparkle-one"></span>
+    <span class="sparkle sparkle-two"></span>
+    <span class="sparkle sparkle-three"></span>
   </div>
 
-  <script src="script.js"></script>
+  <main class="app-shell">
+    <section class="hero-card" aria-labelledby="tituloApp">
+      <p class="eyebrow">Clima en tiempo real</p>
+      <h1 id="tituloApp">App del Clima</h1>
+      <p class="hero-copy">
+        Busca cualquier ciudad y mira temperatura, sensación térmica, humedad, viento y pronóstico de 5 días con una interfaz más viva.
+      </p>
+
+      <form class="search-card" id="formBusqueda" autocomplete="off">
+        <label class="sr-only" for="inputCiudad">Ciudad</label>
+        <div class="input-wrap">
+          <span aria-hidden="true">🔎</span>
+          <input type="search" id="inputCiudad" name="ciudad" placeholder="Ej: Bogotá, Cali, Madrid" spellcheck="false" required>
+        </div>
+        <button type="submit" id="btnBuscar">
+          <span>Buscar</span>
+          <span aria-hidden="true">⚡</span>
+        </button>
+      </form>
+
+      <div class="quick-actions" aria-label="Búsquedas rápidas">
+        <button type="button" class="chip" data-city="Bogotá">Bogotá</button>
+        <button type="button" class="chip" data-city="Medellín">Medellín</button>
+        <button type="button" class="chip" data-city="Cali">Cali</button>
+        <button type="button" class="chip" data-city="London">London</button>
+      </div>
+
+      <button type="button" class="location-button" id="btnUbicacion">
+        <span aria-hidden="true">📍</span>
+        Usar mi ubicación
+      </button>
+    </section>
+
+    <section id="resultado" class="result-card is-empty" aria-live="polite" aria-busy="false">
+      <div class="empty-state">
+        <span class="empty-icon" aria-hidden="true">🌤️</span>
+        <h2>¿Dónde está el clima?</h2>
+        <p>Escribe una ciudad para invocar el pronóstico. Sí, meteorología con estilo, qué elegancia.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Hecho con HTML, CSS, JavaScript modular y Open-Meteo API.
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
